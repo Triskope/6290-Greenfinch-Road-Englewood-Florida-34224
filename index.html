@@ -59,13 +59,14 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px;padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
 
 /* ---------- eyebrow / labels ---------- */
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:18px;overflow-wrap:break-word}
 .eyebrow::before{content:"";display:inline-block;width:34px;height:1px;background:var(--lemon);vertical-align:middle;margin-right:12px}
 
 /* ---------- hero ---------- */
@@ -212,13 +213,14 @@ footer{background:#0d1c20;color:rgba(255,255,255,.45);padding:34px 0;font-size:1
   section{padding:64px 0}
   .wrap{padding-left:max(28px,env(safe-area-inset-left));padding-right:max(28px,env(safe-area-inset-right))}
   .hero-inner{padding:48px 0 64px}
-  .hero h1{font-size:clamp(38px,11vw,52px)}
-  .hero .eyebrow{font-size:11px;letter-spacing:.16em}
-  .hero .eyebrow::before{width:22px;margin-right:9px}
-  .hero-stats{gap:0}
-  .hstat{padding:16px 18px 0 0;margin-right:18px}
+  .hero h1{font-size:clamp(34px,10vw,48px);overflow-wrap:break-word}
+  .hero .eyebrow{font-size:10px;letter-spacing:.12em;line-height:2}
+  .hero .eyebrow::before{display:none}
+  .hero-tags{font-size:10.5px;letter-spacing:.08em;line-height:2;overflow-wrap:break-word}
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+  .hstat{padding:16px 0 0;margin:0}
   .hstat b{font-size:26px}
-  .hero-price{padding-top:16px}
+  .hero-price{grid-column:1/-1;padding-top:20px;margin-top:6px;border-top:1px solid rgba(255,255,255,.25)}
   .fcard-body{padding:30px 22px}
   .spec-grid{grid-template-columns:1fr 1fr}
   .thumbs{grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:7px}
