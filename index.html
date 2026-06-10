@@ -62,7 +62,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
 
 /* ---------- eyebrow / labels ---------- */
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:18px}
@@ -210,8 +210,11 @@ footer{background:#0d1c20;color:rgba(255,255,255,.45);padding:34px 0;font-size:1
 @media (max-width:560px){
   body{font-size:16px}
   section{padding:64px 0}
-  .wrap{padding:0 18px}
+  .wrap{padding-left:max(28px,env(safe-area-inset-left));padding-right:max(28px,env(safe-area-inset-right))}
   .hero-inner{padding:48px 0 64px}
+  .hero h1{font-size:clamp(38px,11vw,52px)}
+  .hero .eyebrow{font-size:11px;letter-spacing:.16em}
+  .hero .eyebrow::before{width:22px;margin-right:9px}
   .hero-stats{gap:0}
   .hstat{padding:16px 18px 0 0;margin-right:18px}
   .hstat b{font-size:26px}
